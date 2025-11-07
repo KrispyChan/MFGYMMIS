@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(equipment-modified.jpg);
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+  background-color: hsl(0, 0%, 60%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 60px;
+ 
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: white;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: rgb(5, 1, 1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: #f4a261; 
+}
+
+.red {
+  color: hsl(0, 100%, 22%);
+  font-weight: 900;
+}
+
+.black {
+  color: black;
+  font-weight: 900;
+}
+
+.bigicon {
+  position: absolute;
+  top: 50%;
+  left: 140px;
+  transform: translateY(-50%); 
+
+}
+
+.bigicon img {
+  width: 600px;
+  height: auto;
+}
+
+.muscletext{
+     position: absolute;
+     top: 25%;
+     left: 670px;
+     color: hsl(0, 100%, 34%);
+     font-size: 40px;
+}
+.factorytext{
+     position: absolute;
+     top: 35%;
+     left: 770px;
+     color: hsl(26, 94%, 41%);
+     font-size: 40px;
+}
+
+.fitnessgymtext{
+     position: absolute;
+     top: 45%;
+     left: 695px;
+     color: hsl(0, 100%, 34%);
+     font-size: 25px;
+}
+
+.login-container {
+    position: absolute;
+    top: 55%;
+    left: 810px;
+}
+
+.login-btn {
+    background-color: black;
+    color: orange;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.login-btn:hover {
+    background-color: orange;
+    color: black;
+}
