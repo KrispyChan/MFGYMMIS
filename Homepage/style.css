@@ -61,59 +61,131 @@ body{
   font-weight: 900;
 }
 
-.bigicon {
-  position: absolute;
-  top: 50%;
-  left: 140px;
-  transform: translateY(-50%); 
-
-}
-
-.bigicon img {
-  width: 600px;
-  height: auto;
-}
-
 .muscletext{
      position: absolute;
-     top: 25%;
-     left: 670px;
+     top: 20%;
+     left: 80px;
      color: hsl(0, 100%, 34%);
-     font-size: 40px;
+     font-size: 60px;
+     font-family: Dela Gothic One, sans-serif;
+     
 }
 .factorytext{
      position: absolute;
-     top: 35%;
-     left: 770px;
+     top: 33%;
+     left: 180px;
      color: hsl(26, 94%, 41%);
-     font-size: 40px;
+     font-size: 60px;
+     font-family: Dela Gothic One, sans-serif;
 }
 
 .fitnessgymtext{
      position: absolute;
-     top: 45%;
-     left: 695px;
+     top: 50%;
+     left: 100px;
      color: hsl(0, 100%, 34%);
-     font-size: 25px;
+     font-size: 40px;
+     font-family: Dela Gothic One, sans-serif;  
 }
 
-.login-container {
+.login-box {
     position: absolute;
-    top: 55%;
-    left: 810px;
+    top: 25%;
+    right: 80px;
+    width: 500px;
+    height: 400px;
+    background-color: rgba(15, 15, 15, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+    left: 800px;
 }
 
-.login-btn {
-    background-color: black;
-    color: orange;
-    padding: 15px 30px;
-    font-size: 18px;
+/* Tabs sa taas (MEMBER / TRAINER / OWNER) */
+.login-tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(0, 0%, 0%);
+    padding: 12px 0;
+}
+
+.login-tabs .tab {
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.login-tabs .tab.active {
+    opacity: 1;
+    border-bottom: 1px solid #f77f00;
+}
+
+/* nilagyan ko nyan para naman may buhay kahit konti kahit visual */
+.login-form {
+    display: absolute;
+    flex-direction: column;
+    padding: 25px;
+    gap: 15px;
+}
+
+.input-box {
+    display: absolute;
+    background-color: hsl(0, 0%, 0%);
+    border: none;
+    border-radius: 20px;
+    padding: 12px 50px;
+    color: hsl(0, 0%, 100%);
+    font-size: 13px;
+    outline: none;
+    height: 45px;
+    width: 350px;
+    margin-top: 10px;
+}
+
+.input-box::placeholder {
+    color: hsl(0, 0%, 47%);
+}
+
+/* Links: Forgot + Signup */
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.form-links a {
     text-decoration: none;
+    color: hsl(31, 100%, 48%);
+    font-weight: bold;
+}
+
+/* Log in button to guys*/
+.login-btn {
+    position: absolute;
+    background-color: black;
+    border: none;
+    color: white;
     font-weight: bold;
     border-radius: 30px;
+    padding: 12px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    left: 160px;
+    top: 270px;
+    height: 70px;
+    width: 200px;
+
 }
 
 .login-btn:hover {
-    background-color: orange;
+    background-color: hsl(31, 100%, 48%);
     color: black;
 }
+
