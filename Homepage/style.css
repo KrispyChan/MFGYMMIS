@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(equipment-modified.jpg);
+    background-image: url(equipmentbg.jpg);
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -177,10 +177,15 @@ body{
     margin-top: 10px;
     cursor: pointer;
     transition: 0.3s;
-    left: 160px;
+    left: 140px;
     top: 270px;
     height: 70px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
 
 }
 
