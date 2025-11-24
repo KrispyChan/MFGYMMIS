@@ -74,7 +74,7 @@ body{
   height: auto;
 }
 
-.abouttext{
+.MFG{
     position: absolute;
     top:20%;
     left: 15%;
@@ -83,29 +83,29 @@ body{
     font-family: Dela Gothic One, sans-serif;
 }
 
-.muscletext{
-    position: absolute;
-    top: 30%;
-    left: 22%;
-    color: hsl(0, 100%, 34%);
-    font-size: 40px;
-    font-family: Dela Gothic One, sans-serif;
+.white{
+  color: #ffffff;
 }
 
-.factorytext{
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    color: hsl(26, 100%, 38%);
-    font-size: 40px;
-    font-family: Dela Gothic One, sans-serif;
+.space{
+  position: absolute;
+  top:39%;
+  left: 15%;
 }
 
 .text{
     position: absolute;
-    top: 62%;
+    top: 70%;
     left: 21%;
     color: hsl(26, 100%, 38%);
     font-size: 20px;
     font-family: Dela Gothic One, sans-serif;
+}
+
+.color{
+  color: #ffffff;
+}
+
+.color2{
+  color: #ffffff;
 }
