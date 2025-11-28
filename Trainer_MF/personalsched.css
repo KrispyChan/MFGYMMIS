@@ -328,14 +328,3 @@ input:checked ~ .toggle .bottom-line {
     cursor: pointer;
     z-index: 10000;       
 }
-
-.toggle {
-    position: absolute;  
-    left: 225px;           
-    top: 31px;            
-    transform: translateY(-50%);
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 10000;       
-}
