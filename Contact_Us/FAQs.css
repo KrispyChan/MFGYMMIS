@@ -73,7 +73,8 @@ body{
     font-family: Dela Gothic One, sans-serif;
     color: white;
     overflow: hidden;
-    left: 420px;
+    left: 230px;
+    margin-top: 80px;
 }
 
 .grid-box1{

@@ -1,7 +1,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(equipmentbg.jpg);
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url(equipmentbg.jpg);
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -14,9 +16,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 5px 60px;
- 
 }
-
 
 .logo {
   display: flex;
@@ -33,7 +33,6 @@ body{
   font-size: 24px;
   color: white;
 }
-
 
 .nav-links {
   list-style: none;
@@ -68,7 +67,6 @@ body{
      color: hsl(0, 100%, 34%);
      font-size: 60px;
      font-family: Dela Gothic One, sans-serif;
-     
 }
 .factorytext{
      position: absolute;
@@ -103,7 +101,8 @@ body{
     left: 800px;
 }
 
-/* Tabs sa taas (MEMBER / TRAINER / OWNER) */
+/* ==== TABS (MEMBER / TRAINER / OWNER) ==== */
+
 .login-tabs {
     display: flex;
     justify-content: space-around;
@@ -111,20 +110,24 @@ body{
     padding: 12px 0;
 }
 
+
 .login-tabs .tab {
-    color: hsl(0, 0%, 100%);
     font-weight: bold;
     font-size: 14px;
-    cursor: pointer;
     opacity: 0.8;
 }
 
-.login-tabs .tab.active {
-    opacity: 1;
-    border-bottom: 1px solid #f77f00;
+.login-tabs .tab a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* nilagyan ko nyan para naman may buhay kahit konti kahit visual */
+
+.login-tabs .tab a:hover {
+    color: #f4a261;
+}
+
 .login-form {
     display: absolute;
     flex-direction: column;
@@ -185,12 +188,9 @@ body{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    
-
 }
 
 .login-btn:hover {
     background-color: hsl(31, 100%, 48%);
     color: black;
 }
-
