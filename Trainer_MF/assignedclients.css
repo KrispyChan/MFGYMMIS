@@ -133,7 +133,6 @@ header h2 {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translateX(-260px);
     transition: 0.5s ease;
     border-radius: 0 10px 10px 0;
 }
@@ -353,13 +352,3 @@ input:checked ~ .toggle .bottom-line {
     border: 8px solid #cba8ff;
 }
 
-.toggle {
-    position: absolute;  
-    left: 225px;           
-    top: 31px;            
-    transform: translateY(-50%);
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 10000;       
-}
