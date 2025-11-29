@@ -14,7 +14,7 @@ body{
 .search-container {
     position: absolute;
     right: 200px;
-    top: 12px;
+    top: 20px;
     background: #fff;
     padding: 8px 20px;
     border-radius: 30px;
@@ -52,13 +52,10 @@ body{
     bottom: 10px;
     left: 20px;
 }
-input [type="checkbox"]{
-    display: none;
-}
 h2{
     position: absolute;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     background-color: #191919;
 }
@@ -98,7 +95,6 @@ h2{
     transition: 0.5s ease;
     border-radius: 10px;
     gap: 20px;
-    transform: translateX(-260px);
 }
 .logo h1{
     color: #cb5b06;
@@ -137,70 +133,9 @@ ul li:hover a{
     background-color: #cb5b06;
 }
 
-input{
+input[type="checkbox"]{
     display: none;
     visibility: hidden;
-}
-.toggle{
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    top: 12px;
-    left: 233px;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: 5px;
-    background: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: translateX(-220px);
-    transition: 0.5s ease;
-
-}
-.toggle .common{
-    position: absolute;
-    height: 2px;
-    width: 10px;
-    border-radius: 50px;
-    background-color: #cb5b06;
-    transition: 0.3s ease;
-}
-.toggle .top-line{
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.toggle .middle-line{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.toggle .bottom-line{
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-input:checked ~ .toggle .top-line{
-    left: 0px;
-    top: 10px;
-    width: 20px;
-    transform: rotate(45deg);
-}
-input:checked ~ .toggle .bottom-line{
-    left: 0px;
-    top: 10px;
-    width: 20px;
-    transform: rotate(-45deg);
-}
-input:checked ~ .toggle .middle-line{ 
-    opacity: 0;
-    transform: translateX(20px);
-}
-input:checked ~ .slide{
-    transform: translateX(0);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-input:checked ~ .toggle{
-    transform: translateX(0);
 }
 .logout{
     position: absolute;
