@@ -125,7 +125,7 @@ body{
 
 .equipmenttext{
     position: absolute;
-    top: 120%;
+    top: 945px;
     left: 60%;
     color: hsl(26, 100%, 38%);
     font-size: 30px;
@@ -152,7 +152,7 @@ body{
 
 .environmenttext{
     position: absolute;
-    top: 220%;
+    top: 1700px;
     left: 5%;
     color: hsl(26, 100%, 38%);
     font-size: 30px;
@@ -179,7 +179,7 @@ body{
 
 .facilitytext{
     position: absolute;
-    top: 320%;
+    top: 2425px;
     left:55%;
     color: hsl(26, 100%, 38%);
     font-size: 30px;
@@ -194,7 +194,7 @@ body{
 .Back{
     position: absolute;
     top: 400%;
-    left:45%;  
+    left: 43%;  
 }
 
 .Back button{
@@ -204,6 +204,7 @@ body{
     background-color: hsl(26, 100%, 38%);
     padding: 15px;
     font-size: 15px;
+    margin-bottom: 50px;
 }
 .Back a{
     color: black;

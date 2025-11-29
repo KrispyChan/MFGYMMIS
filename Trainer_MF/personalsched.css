@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("trainerdashbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: #191919;
+    position: relative;
+    height: 70px;
+}
+header h2 {
+    margin-top: 5px;
+}
+
+.search-container {
+    position: absolute;
+    right: 200px;
+    top: 12px;
+    background: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 250px; /* ← LAKI nito, adjust mo if gusto mo mas malapad */
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    height: 50px;
+    z-index: 9999;
+    
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%; /* ← para lumaki FULL inside container */
+}
+
+.search-container i {
+    font-size: 22px;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+
+.searchiconpic {
+    width: 30px;
+    height: 22px;
+}
+
+.profcon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 130px;
+    top: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.orange {
+    position: absolute;
+    color: hsl(29, 99%, 45%);
+    font-weight: 900;
+    font-size: 40px;
+    left: 685px;
+}
+
+.white {
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    font-weight: 900;
+    font-size: 40px;
+    left: 844px;
+}
+
+.toggle {
+    position: absolute;      /* nasa loob ng header */
+    left: 20px;              /* adjust mo kung gusto mo ilapit/layo sa gilid */
+    top: 50%;                /* gitna vertically */
+    transform: translateY(-50%);
+    width: 36px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.common {
+    height: 3px;
+    width: 22px;
+    background: #cb5b06;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* CENTER BOX */
+.center-box {
+    position: absolute;
+    width: 50%;
+    left: 525px;
+    top: 100px;
+    background-color: #191919;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.orange-text {
+    color: #E36D01;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.white-text {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.machoguy1 {
+    width: 40%;
+    position: absolute;
+    bottom: 5px;
+    left: 800px;
+    filter: brightness(0) invert(0);
+}
+
+.machoguy2 {
+    width: 40%;
+    position: absolute;
+    bottom: 5px;
+    left: 785px;
+}
+
+
+/* SIDEBAR */
+.slide {
+    height: 100%;
+    width: 260px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-260px);
+    transition: 0.5s ease;
+    border-radius: 0 10px 10px 0;
+}
+
+.logo img {
+    width: 40px;
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+}
+
+.logo h1 {
+    color: #cb5b06;
+    padding: 20px;
+    padding-left: 65px;
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+ul li:hover a {
+    background: #cb5b06;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input:checked ~ .slide {
+    transform: translateX(0);
+}
+
+input:checked ~ .toggle {
+    transform: translateX(0);
+}
+
+.slide {
+    transform: translateX(0) !important;
+}
+
+.common {
+    height: 2.4px;
+    width: 15px;
+    background: #cb5b06;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-line { top: 5px; }
+.middle-line { top: 10px; }
+.bottom-line { top: 15px; }
+
+/* OPEN ANIMATION */
+input:checked ~ .slide {
+    transform: translateX(0);
+}
+
+input:checked ~ .toggle {
+    transform: translateX(0);
+}
+
+input:checked ~ .toggle .middle-line {
+    opacity: 0;
+}
+
+input:checked ~ .toggle .top-line {
+    transform: translateX(-50%) rotate(45deg);
+    top: 10px;
+}
+
+input:checked ~ .toggle .bottom-line {
+    transform: translateX(-50%) rotate(-45deg);
+    top: 10px;
+}
+
+/* LOGOUT */
+.logout {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    background: #cb5b06;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background: #000;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: #fff;
+}
+
+.MySchedBox {
+    position: absolute;
+    top: 250px;
+    left: 525px;
+    width: 160px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.myschedtext {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.schedule-table-container {
+    position: absolute;
+    top: 300px; 
+    left: 450px;
+}
+
+.schedule-table {
+    width: 900px;
+    border-collapse: collapse;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 18px;
+}
+
+.schedule-table th, 
+.schedule-table td {
+    border: 2px solid #fff;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #111;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.cancel-btn {
+    background-color: #cb5b06;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #ff7b00;
+}
+
+.toggle {
+    position: absolute;  
+    left: 225px;           
+    top: 31px;            
+    transform: translateY(-50%);
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10000;       
+}

@@ -63,12 +63,15 @@ body{
 }
 
 .contact-form {
+    position: absolute;
     width: 350px;
     padding: 30px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     margin: auto;
     text-align: left;
+    top: 160px;
+    left: 525px;
 }
 
 .contact-form label {
@@ -81,7 +84,7 @@ body{
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin-bottom: 15px;
     background: #3a3838;
