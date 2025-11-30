@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -19,6 +20,7 @@ header {
     background-color: #191919;
     position: relative;
     height: 70px;
+    z-index: 1;
 }
 
 header h2 {
@@ -27,32 +29,26 @@ header h2 {
 
 .search-container {
     position: absolute;
-    right: 200px;
-    top: 12px;
+    right: 160px;
+    top: 10px;
     background: #fff;
     padding: 8px 20px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 250px; /* ← LAKI nito, adjust mo if gusto mo mas malapad */
+    width: 250px;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     height: 50px;
-    z-index: 9999;
-    
+    z-index: 2;
 }
 
 .search-container input {
     border: none;
     outline: none;
-    font-size: 16px;
-    width: 100%; /* ← para lumaki FULL inside container */
-}
-
-.search-container i {
-    font-size: 22px;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    font-family: Arial, sans-serif;
 }
 
 .searchiconpic {
@@ -64,35 +60,37 @@ header h2 {
     width: 40px;
     height: 40px;
     position: absolute;
-    right: 130px;
+    right: 100px;
     top: 15px;
     border-radius: 50%;
     cursor: pointer;
 }
+
 .orange {
     position: absolute;
-    color: hsl(29, 99%, 45%);
-    font-weight: 900;
+    color: #E36D01;
+    font-weight: 800;
     font-size: 40px;
-    left: 615px;
+    left: 540px;
+    top: 12px;
 }
 
 .white {
     position: absolute;
-    color: hsl(0, 0%, 100%);
-    font-weight: 900;
+    color: #fff;
+    font-weight: 800;
     font-size: 40px;
-    left: 844px;
+    left: 830px;
+    top: 12px;
 }
 
-/* CENTER BOX */
 .center-box {
     position: absolute;
     width: 35%;
-    left: 700px;
+    left: 650px;
     top: 100px;
     background-color: #191919;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     text-align: center;
 }
@@ -109,23 +107,6 @@ header h2 {
     font-weight: 700;
 }
 
-.machoguy1 {
-    width: 40%;
-    position: absolute;
-    bottom: 5px;
-    left: 800px;
-    filter: brightness(0) invert(0);
-}
-
-.machoguy2 {
-    width: 40%;
-    position: absolute;
-    bottom: 5px;
-    left: 785px;
-}
-
-
-/* SIDEBAR */
 .slide {
     height: 100%;
     width: 260px;
@@ -133,9 +114,10 @@ header h2 {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translateX(-260px);
     transition: 0.5s ease;
     border-radius: 0 10px 10px 0;
+    transform: translateX(0);
+    z-index: 3;
 }
 
 .logo img {
@@ -151,6 +133,9 @@ header h2 {
     padding-left: 65px;
     border-bottom: 1px solid #fff;
     font-size: 18px;
+    padding-bottom: 28px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
 }
 
 ul li {
@@ -162,6 +147,15 @@ ul li a {
     text-decoration: none;
     color: #fff;
     padding: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+ul li a i {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
 }
 
 ul li:hover a {
@@ -180,10 +174,6 @@ input:checked ~ .toggle {
     transform: translateX(0);
 }
 
-.slide {
-    transform: translateX(0) !important;
-}
-
 .common {
     height: 2.4px;
     width: 15px;
@@ -193,11 +183,18 @@ input:checked ~ .toggle {
     transform: translateX(-50%);
 }
 
-.top-line { top: 5px; }
-.middle-line { top: 10px; }
-.bottom-line { top: 15px; }
+.top-line {
+    top: 5px;
+}
 
-/* OPEN ANIMATION */
+.middle-line {
+    top: 10px;
+}
+
+.bottom-line {
+    top: 15px;
+}
+
 input:checked ~ .slide {
     transform: translateX(0);
 }
@@ -220,7 +217,6 @@ input:checked ~ .toggle .bottom-line {
     top: 10px;
 }
 
-/* LOGOUT */
 .logout {
     position: absolute;
     bottom: 40px;
@@ -237,6 +233,9 @@ input:checked ~ .toggle .bottom-line {
 .logout-btn {
     text-decoration: none;
     color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
 }
 
 .MySchedBox {
@@ -259,7 +258,7 @@ input:checked ~ .toggle .bottom-line {
 
 .schedule-table-container {
     position: absolute;
-    top: 300px; 
+    top: 300px;
     left: 450px;
 }
 
@@ -271,7 +270,7 @@ input:checked ~ .toggle .bottom-line {
     font-size: 18px;
 }
 
-.schedule-table th, 
+.schedule-table th,
 .schedule-table td {
     border: 2px solid #fff;
     padding: 12px 15px;
@@ -347,14 +346,13 @@ input:checked ~ .toggle .bottom-line {
 
 .performance-container {
     position: absolute;
-    top: 300px;
+    top: 250px;
     left: 450px;
     display: grid;
     grid-template-columns: 480px 480px;
     gap: 30px;
 }
 
-/* CARD BASE STYLE */
 .performance-card,
 .comments-card,
 .improvement-card,
@@ -364,16 +362,15 @@ input:checked ~ .toggle .bottom-line {
     border-radius: 25px;
     color: white;
     backdrop-filter: blur(5px);
+
 }
 
-/* TITLES */
 .card-title {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-/* PERFORMANCE CIRCLE */
 .performance-circle {
     width: 140px;
     height: 140px;
@@ -387,7 +384,6 @@ input:checked ~ .toggle .bottom-line {
     font-weight: bold;
 }
 
-/* COMMENTS TABLE */
 .comments-table {
     width: 100%;
     border-collapse: collapse;
@@ -405,7 +401,6 @@ input:checked ~ .toggle .bottom-line {
     background: #111;
 }
 
-/* IMPROVEMENT BOX */
 .improvement-box {
     width: 100%;
     height: 150px;
@@ -416,9 +411,9 @@ input:checked ~ .toggle .bottom-line {
     border: 1px solid #fff;
     resize: none;
     font-size: 14px;
+    font-family: Arial, sans-serif;
 }
 
-/* ANALYTICS BAR */
 .bar-row {
     margin-bottom: 20px;
 }
@@ -442,23 +437,12 @@ input:checked ~ .toggle .bottom-line {
 }
 
 .toggle {
-    position: absolute;   /* nasa loob ng header */
-    left: 225px;           /* gaano kalayo sa left – pwede mo palitan */
-    top: 31px;             /* gitna sa taas-baba ng header */
+    position: absolute;
+    left: 225px;
+    top: 31px;
     transform: translateY(-50%);
     width: 30px;
     height: 24px;
     cursor: pointer;
-    z-index: 10000;       /* para hindi natatabunan */
-}
-
-.toggle {
-    position: absolute;  
-    left: 225px;           
-    top: 31px;            
-    transform: translateY(-50%);
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 10000;       
+    z-index: 4;
 }

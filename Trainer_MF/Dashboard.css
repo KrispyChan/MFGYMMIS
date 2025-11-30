@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -40,7 +41,6 @@ header h2 {
     font-size: 40px;
     left: 834px;
 }
-
 
 .center-box {
     position: absolute;
@@ -79,7 +79,7 @@ header h2 {
     bottom: 5px;
     left: 785px;
 }
-/* SIDEBAR */
+
 .slide {
     height: 100%;
     width: 260px;
@@ -105,7 +105,10 @@ header h2 {
     padding-left: 65px;
     border-bottom: 1px solid #fff;
     font-size: 18px;
+    padding-bottom: 28px;
+    font-weight: 700;
 }
+
 
 ul li {
     list-style: none;
@@ -116,11 +119,20 @@ ul li a {
     text-decoration: none;
     color: #fff;
     padding: 20px;
+    font-size: 15px;   
+    font-weight: 500;     
+}
+
+ul li a i {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
 }
 
 ul li:hover a {
     background: #cb5b06;
 }
+
 
 input[type="checkbox"] {
     display: none;
@@ -151,7 +163,6 @@ input:checked ~ .toggle {
 .middle-line { top: 10px; }
 .bottom-line { top: 15px; }
 
-/* OPEN ANIMATION */
 input:checked ~ .slide {
     transform: translateX(0);
 }
@@ -174,7 +185,7 @@ input:checked ~ .toggle .bottom-line {
     top: 10px;
 }
 
-/* LOGOUT */
+
 .logout {
     position: absolute;
     bottom: 40px;
@@ -191,4 +202,7 @@ input:checked ~ .toggle .bottom-line {
 .logout-btn {
     text-decoration: none;
     color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trainer PersonalSchedule</title>
+    <title>Trainer AttendanceLogging</title>
     <link rel="stylesheet" href="attendancelogging.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -27,29 +27,26 @@
     <p><span class="white-text">YOUR ATTENDANCE HERE!</span></p>
 </div>
 
-    <div class="slide">
-        <div class="logo">
-            <img src="trainerdashlogo.png" alt="Muscle Factory logo">
-            <h1>MUSCLEFACTORY</h1>
-        </div>
-
-        <ul>
-            <li><a href="Dashboard.html"><i class='bx bx-home-alt'></i>Dashboard</a></li>
-            <li><a href="personalsched.html"><i class='bx bx-calendar-week'></i>Personal Schedule</a></li>
-            <li><a href="assignedclients.html"><i class='bx bx-user'></i>Assigned Clients</a></li>
-            <li><a href="performancereports.html"><i class='bx bx-file'></i>Performance Reports</a></li>
-            <li><a href="attendancelogging.html"><i class='bx bx-file'></i>Attendance Logging</a></li>
-        </ul>
-
-        <div class="logout">
-            <a href="../Homepage/homepageindex.html" class="logout-btn"><i class='bx bx-log-out'></i>Log Out</a>
-        </div>
+<div class="slide">
+    <div class="logo">
+        <img src="trainerdashlogo.png" alt="Muscle Factory logo">
+        <h1>MUSCLEFACTORY</h1>
     </div>
-</label>
+
+    <ul>
+        <li><a href="Dashboard.html"><i class='bx bx-home-alt'></i>Dashboard</a></li>
+        <li><a href="personalsched.html"><i class='bx bx-calendar-week'></i>Personal Schedule</a></li>
+        <li><a href="assignedclients.html"><i class='bx bx-user'></i>Assigned Clients</a></li>
+        <li><a href="performancereports.html"><i class='bx bx-file'></i>Performance Reports</a></li>
+        <li><a href="attendancelogging.html"><i class='bx bx-file'></i>Attendance Logging</a></li>
+    </ul>
+
+    <div class="logout">
+        <a href="../Homepage/homepageindex.html" class="logout-btn"><i class='bx bx-log-out'></i>Log Out</a>
+    </div>
+</div>
 
 <div class="attendance-container">
-
-    <!-- LEFT TABLE -->
     <div class="attendance-table-box">
         <table class="attendance-table">
             <tr>
@@ -72,10 +69,9 @@
             <tr><td>09/30/2025</td><td>1:00 PM</td><td>6:00 PM</td><td>5 HOURS</td></tr>
             <tr><td>09/25/2025</td><td>9:00 AM</td><td>1:00 PM</td><td>4 HOURS</td></tr>
         </table>
-</div>
+    </div>
 
-<div class="stats-panel">
-
+    <div class="stats-panel">
         <div class="stats-box">
             <h3>Days Present</h3>
             <p class="stats-number">58</p>
@@ -94,7 +90,6 @@
             <div class="bar-bg"><div class="bar-fill" style="width:9%;"></div></div>
         </div>
 
-        <!-- GRAPH -->
         <div class="stats-graph">
             <div class="bar present"></div>
             <div class="bar late"></div>
@@ -106,9 +101,7 @@
                 <span>Absent</span>
             </div>
         </div>
-
     </div>
-
 </div>
 
 </body>
