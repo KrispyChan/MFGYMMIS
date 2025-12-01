@@ -285,6 +285,7 @@ th {
 }
 
 .setting-btn {
+    position: absolute;
     background: #d45500;
     color: white;
     border: none;
@@ -296,6 +297,8 @@ th {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+    left: 20px;
+    top: 360px;
 
 }
 
