@@ -3,18 +3,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    background-image: url(place\ 2.jpg);
+    background-image: url("place 2.jpg");
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
+
+header{
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: #191919;
+    position: relative;
+    height: 70px;
+}
+
+header h2{
+    margin-top: 5px;
+}
+
+.orange{
+    position: absolute;
+    color: #E36D01;
+    font-weight: 900;
+    font-size: 40px;
+    left: 530px;
+    top: 10px;
+}
+
+.white{
+    position: absolute;
+    color: #fff;
+    font-weight: 900;
+    font-size: 40px;
+    left: 740px;
+    top: 10px;
+}
+
 .search-container {
     position: absolute;
-    right: 120px;
-    top: 20px;
+    right: 200px;
+    top: 12px;
     background: #fff;
     padding: 8px 20px;
     border-radius: 30px;
@@ -22,282 +56,226 @@ body{
     align-items: center;
     gap: 12px;
     width: 250px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.4);
     height: 50px;
-    z-index: 9999;
-    
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
+
 .search-container input {
     border: none;
     outline: none;
     font-size: 16px;
-    width: 100%; 
-}
-.search-container i {
-    font-size: 22px;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
+    width: 100%;
+    background: none;
 }
 
 .searchiconpic {
-    position: absolute;
-    width: 45px;
+    width: 30px;
+    height: 22px;
+}
+
+.profcon{
+    width: 40px;
     height: 40px;
-    right: -50px;
-}
-.searchiconpic1{
     position: absolute;
-    height: 45px;
-    width: 50px;
-    bottom: 10px;
-    left: 20px;
+    right: 130px;
+    top: 15px;
+    border-radius: 50%;
+    cursor: pointer;
 }
-h2{
-    position: absolute;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    background-color: #191919;
-}
-.orange{
-    font-size: 40px;
-    color: #E36D01;
-    font-weight: 800;
-} 
-.white{
-    font-size: 40px;
-    color: #fff;
-    font-weight: 800;
-}
-.paragraph{
-    position: absolute;
-    background-color: #191919;
-    border-radius: 10px;
-    text-align: center;
-    left: 490px;
-    bottom: 50px;
-    padding: 10px 15px 10px 15px;
-    margin: 10px;
-}
+
 .slide{
     height: 100%;
     width: 260px;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #000;
-    transition: 0.5s ease;
-    border-radius: 10px;
-    gap: 20px;
+    border-radius: 0 10px 10px 0;
 }
+
+.logo img{
+    width: 40px;
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
 .logo h1{
     color: #cb5b06;
     font-weight: 600;
     text-align: right;
-    padding: 10px 0;
+    padding: 20px 0;
     padding-right: 30px;
-    pointer-events: none;
     border-bottom: 1px solid #fff;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 0;
+    padding-bottom: 28px;
 }
-.logo img{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-}
+
 ul li{
     list-style: none;
 }
+
 ul li a{
     color: #fff;
     font-weight: 500;
-    padding: 20px 0;
-    display: block;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.3s ease-out;
+    white-space: nowrap;
+    font-size: 14px;
 }
-ul li a .active{
-    background-color: #cb5b06;
-}
+
 ul li a i{
-    width: 40px;
-    text-align: center;
+    width: 24px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-ul li:hover a{
+
+ul li:hover a,
+ul li a.active{
     background-color: #cb5b06;
 }
-input[type="checkbox"]{
-    display: none;
-    visibility: hidden;
+
+.profile{
+    position: absolute;
+    color: #fff;
+    bottom: 80px;
+    left: 40px;
+    font-size: 16px;
 }
+
 .logout{
     position: absolute;
-    top: 550px;
+    bottom: 40px;
     left: 80px;
     height: 32px;
-    width: 70px;
+    width: 90px;
     cursor: pointer;
     border-radius: 5px;
     background-color: #cb5b06;
     padding-top: 5px;
     padding-left: 5px;
-
 }
+
 .logout-btn{
     text-decoration: none;
     color: #fff;
 }
-.logout:hover {
+
+.logout:hover{
     background-color: #000;
 }
-.profile{
-    position: absolute;
-    color: #fff;
-    bottom: 40px;
-    left: 80px;
-}
-.panel{
-    background-color: #191919;
-    position: absolute;
-    left: 350px;
-    width: 900px;
-    height: 100px;
-    padding: 15px;
-    color: #cb5b06;
-    font-size:  45px;
-    text-align: center;
-    border-radius: 20px;
-}
-.panel:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-}
-.member{top: 150px;}
 
-.Add{
-    background-color: #191919;
+.member-panel{
     position: absolute;
-    left: 550px;
-    width: 500px;
-    height: 200px;
-    padding: 15px;
-    color: #cb5b06;
-    font-size:  30px;
-    text-align: center;
-    border-radius: 20px;
-}
-.Member{top: 300px;}
-.add-btn {
-    position: absolute;
-    background-color: black;
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 30px;
-    padding: 12px;
-    font-size: 15px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    left: 720px;
-    top: 400px;
-    height: 50px;
-    width: 150px;
-}
-.add-btn:hover {
-    background-color: hsl(31, 100%, 48%);
-    color: black;
-}
-.Table h2{
-    position: absolute;
-    height: 240px;
-    width: 65%;
-    top: 100px;
-    color: #cb5b06;
-    text-align: left;
+    top: 120px;
     left: 350px;
-    border-radius: 20px;
-
-} 
- table {
-    position: absolute;
-    top: 150px;
-    left: 370px;
-    color: white;
-    height: 80px;
     width: 60%;
-    border-collapse: collapse;
-    font-family: Arial;
-    }
-    tr, td {
-    padding: 10px;
-    border: 3px solid #ccc;
-    text-align: center;
-    }
+    background-color: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+}
 
-    th {
-    background-color: #f2f2f2;
-    }
-    .add{
+.member-header{
+    padding: 15px 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #cb5b06;
+    border-bottom: 2px solid #333;
+}
+
+.member-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.member-table tr,
+.member-table td{
+    padding: 15px;
+    border: 2px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+    background-color: #191919;
+}
+
+.add{
     position: absolute;
     height: 200px;
     width: 300px;
-    top: 350px;
-    left: 590px;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #191919;
     border-radius: 20px;
+}
 
-    }
-    .add input{
+.add input{
     background-color: #000;
     border-radius: 10px;
     border: none;
     color: #fff;
     height: 30px;
     width: 250px;
+    padding: 0 8px;
+}
 
-    }
-    .ADD{
-    background-color: #cb5b06;
-    border-radius: 20px;
-    position: absolute;
-    border: none;
-    height: 30px;
-    width: 100px;
-    color: #000;
-    top: 150px;
-    left: 30px;
-    }
-    .ADD:hover{
-    background-color: #fff;
-    }
-    .name{
+.name{
     position: absolute;
     top: 20px;
-    left: 20px;
-    }
-    .Date{
+    left: 25px;
+}
+
+.Date{
     position: absolute;
-    top: 60px;
-    left: 20px;
-    }
-    .NO{
+    top: 70px;
+    left: 25px;
+}
+
+.NO{
     position: absolute;
-    top: 100px;
-    left: 20px;
-    }
-    .remove{
+    top: 120px;
+    left: 25px;
+}
+
+.ADD{
     background-color: #cb5b06;
     border-radius: 20px;
     position: absolute;
     border: none;
     height: 30px;
-    width: 100px;
+    width: 110px;
     color: #000;
-    top: 150px;
-    left: 160px;
-    }
-    .remove:hover{
+    bottom: 15px;
+    left: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.remove{
+    background-color: #cb5b06;
+    border-radius: 20px;
+    position: absolute;
+    border: none;
+    height: 30px;
+    width: 130px;
+    color: #000;
+    bottom: 15px;
+    right: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ADD:hover,
+.remove:hover{
     background-color: #fff;
-    }
+}

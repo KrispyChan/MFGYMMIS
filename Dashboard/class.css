@@ -3,27 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    background-image: url(place\ 2.jpg);
-    background-repeat:  no-repeat;
+    background-image: url("place 2.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
+
+/* HEADER (same style as dashboard) */
+
+header{
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: #191919;
+    position: relative;
+    height: 70px;
+}
+
+header h2{
+    margin-top: 5px;
+}
+
+.orange{
+    position: absolute;
+    color: #E36D01;
+    font-weight: 900;
+    font-size: 30px;
+    left: 400px;          /* adjust if needed para gitna sa monitor mo */
+    top: 10px;
+}
+
+.white{
+    position: absolute;
+    color: #fff;
+    font-weight: 900;
+    font-size: 30px;
+    left: 730px;          /* adjust pair with .orange */
+    top: 10px;
+}
+
 .search-container {
     position: absolute;
-    right: 50px;
-    top: 20px;
+    right: 200px;
+    top: 12px;
     background: #fff;
     padding: 8px 20px;
     border-radius: 30px;
     display: flex;
     align-items: center;
+    gap: 12px;
     width: 250px;
     height: 50px;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
+
 .search-container input {
     border: none;
     outline: none;
@@ -31,211 +69,214 @@ body{
     width: 100%;
     background: none;
 }
-.search-container i {
-    font-size: 22px;
-    color: hsl(0, 0%, 0%);
+
+.searchiconpic {
+    width: 30px;
+    height: 22px;
+}
+
+.profcon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 130px;
+    top: 15px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.searchiconpic {
-    position: absolute;
-    width: 45px;
-    height: 40px;
-    right: -50px;
-}
-.searchiconpic1{
-    position: absolute;
-    height: 45px;
-    width: 50px;
-    bottom: 10px;
-    left: 20px;
-}
-h2{
-    position: absolute;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    background-color: #191919;
-}
-.orange{
-    font-size: 40px;
-    color: #E36D01;
-    font-weight: 800;
-} 
-.white{
-    font-size: 40px;
-    color: #fff;
-    font-weight: 800;
-}
-.paragraph{
-    position: absolute;
-    background-color: #191919;
-    border-radius: 10px;
-    text-align: center;
-    left: 490px;
-    bottom: 50px;
-    padding: 10px 15px 10px 15px;
-    margin: 10px;
-}
+/* SIDEBAR (kopya sa dashboard) */
+
 .slide{
     height: 100%;
     width: 260px;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #000;
-    transition: 0.5s ease;
-    border-radius: 10px;
-    gap: 20px;
+    border-radius: 0 10px 10px 0;
 }
+
+.logo img{
+    width: 40px;
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
 .logo h1{
     color: #cb5b06;
     font-weight: 600;
     text-align: right;
-    padding: 10px 0;
+    padding: 20px 0;
     padding-right: 30px;
-    pointer-events: none;
     border-bottom: 1px solid #fff;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 0;
+    padding-bottom: 28px;
 }
-.logo img{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-}
+
 ul li{
     list-style: none;
 }
+
 ul li a{
     color: #fff;
     font-weight: 500;
-    padding: 20px 0;
-    display: block;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.3s ease-out;
+    white-space: nowrap;
+    font-size: 14px;
 }
-ul li a .active{
-    background-color: #cb5b06;
-}
+
 ul li a i{
-    width: 40px;
-    text-align: center;
+    width: 24px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-ul li:hover a{
+
+ul li:hover a,
+ul li a.active{
     background-color: #cb5b06;
 }
-input[type="checkbox"]{
-    display: none;
-    visibility: hidden;
+
+.profile{
+    position: absolute;
+    color: #fff;
+    bottom: 80px;
+    left: 40px;
+    font-size: 16px;
 }
+
 .logout{
     position: absolute;
-    top: 550px;
+    bottom: 40px;
     left: 80px;
     height: 32px;
-    width: 70px;
+    width: 90px;
     cursor: pointer;
     border-radius: 5px;
     background-color: #cb5b06;
     padding-top: 5px;
     padding-left: 5px;
-
 }
+
 .logout-btn{
     text-decoration: none;
     color: #fff;
 }
-.logout:hover {
+
+.logout:hover{
     background-color: #000;
 }
-.profile{
-    position: absolute;
-    color: #fff;
-    bottom: 40px;
-    left: 80px;
-}
-.photo img{
-    position: absolute;
-    height: 250px;
-    width: 250px;
-    top: 240px;
-    left: 340px;
-}
-.date h2{
-    position: absolute;
-    color: #191919;
-    background-color: #191919;
-    height: 400px;
-    width: 920px;
-    top: 120px;
-    left: 300px;
-    border-radius: 20px;
-}
-table {
+
+/* MAIN SCHEDULE CARD */
+
+.schedule-wrapper{
     position: absolute;
     top: 130px;
-    left: 560px;
-    color: white;
-    width: 50%;
-    border-collapse: collapse;
-    font-family: Arial;
-    }
-    tr, td {
-    padding: 10px;
-    border: 3px solid #ccc;
-    text-align: center;
-    }
-    .add{
-    position: absolute;
-    height: 230px;
-    width: 300px;
-    top: 250px;
-    left: 740px;
-    background-color: #b85205;
-    border-radius: 20px;
+    left: 320px;
+    right: 40px;
+}
 
-    }
-    .add input{
-    background-color: #000;
-    border-radius: 10px;
-    border: none;
-    color: #fff;
-    height: 30px;
-    width: 250px;
+.schedule-card{
+    background:#111;
+    border-radius:20px;
+    padding:25px 30px;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+    color:#fff;
+}
 
-    }
-    .ADD{
-    background-color: #000;
-    border-radius: 20px;
-    position: absolute;
-    border: none;
-    height: 30px;
-    width: 100px;
-    color: #cb5b06;
-    top: 180px;
-    left: 100px;
-    }
-    .ADD:hover{
-    background-color: #fff;
-    }
-    .name{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    }
-    .Date{
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    }
-    .NO{
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    }
-    .Time{
-        position: absolute;
-        top: 140px;
-        left: 20px;
-    }
+.card-title{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.schedule-content{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+/* calendar sa kaliwa */
+
+.calendar-box img{
+    width:260px;
+    height:260px;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+/* table sa gitna, mas malaki na */
+
+.table-box{
+    flex:1;
+}
+
+.table-box table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+}
+
+.table-box th,
+.table-box td{
+    border:2px solid #555;
+    padding:10px 12px;
+    text-align:center;
+}
+
+.table-box th{
+    background:#222;
+}
+
+/* form sa kanan */
+
+.form-box{
+    width:260px;
+    background:#b85205;
+    border-radius:20px;
+    padding:18px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-box label{
+    font-size:13px;
+}
+
+.form-box input{
+    height:32px;
+    border-radius:10px;
+    border:none;
+    padding:0 10px;
+    background:#000;
+    color:#fff;
+    font-size:13px;
+}
+
+.add-btn{
+    margin-top:8px;
+    height:34px;
+    border-radius:20px;
+    border:none;
+    background:#000;
+    color:#cb5b06;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:#fff;
+    color:#000;
+}

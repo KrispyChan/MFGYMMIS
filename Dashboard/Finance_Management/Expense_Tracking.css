@@ -3,18 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    background-image: url(place\ 2.jpg);
+    background-image: url("place 2.jpg");
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
+
+/* HEADER – same as reference */
+header{
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: #000;
+    position: relative;
+    height: 70px;
+}
+
+header h2{
+    margin-top: 5px;
+}
+
+.orange{
+    color: #E36D01;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.white{
+    color: #fff;
+    font-weight: 900;
+    font-size: 32px;
+}
+
+/* SEARCH BAR */
 .search-container {
     position: absolute;
     right: 200px;
-    top: 5px;
+    top: 12px;
     background: #fff;
     padding: 8px 20px;
     border-radius: 30px;
@@ -22,281 +52,224 @@ body{
     align-items: center;
     gap: 12px;
     width: 250px;
+    height: 45px;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
-    height: 35px;
-    z-index: 9999;
-    
 }
+
 .search-container input {
     border: none;
     outline: none;
     font-size: 16px;
-    width: 100%; 
-}
-.search-container i {
-    font-size: 22px;
-    color: hsl(0, 0%, 0%);
-    cursor: pointer;
+    width: 100%;
+    background: none;
 }
 
 .searchiconpic {
-    position: absolute;
-    width: 45px;
+    width: 30px;
+    height: 22px;
+}
+
+/* PROFILE ICON */
+.profcon {
+    width: 40px;
     height: 40px;
-    right: -50px;
-    top: -2px;
-}
-.searchiconpic1{
     position: absolute;
-    height: 45px;
-    width: 50px;
-    bottom: 10px;
-    left: 20px;
+    right: 130px;
+    top: 15px;
+    border-radius: 50%;
+    cursor: pointer;
 }
-input [type="checkbox"]{
-    display: none;
-}
-h2{
-    position: absolute;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    background-color: #000000;
-    height:7.5%;
-}
-.orange{
-    font-size: 30px;
-    color: #E36D01;
-    font-weight: 800;
-} 
-.white{
-    font-size: 30px;
-    color: #fff;
-    font-weight: 800;
-}
-.paragraph{
-    position: absolute;
-    background-color: #191919;
-    border-radius: 10px;
-    text-align: center;
-    left: 490px;
-    bottom: 50px;
-    padding: 10px 15px 10px 15px;
-    margin: 10px;
-}
+
+/* SIDEBAR */
 .slide{
     height: 100%;
     width: 260px;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #000;
-    transition: 0.5s ease;
-    border-radius: 10px;
-    gap: 20px;
-    /* transform: translateX(-260px); */
+    border-radius: 0 10px 10px 0;
 }
+
+.logo img{
+    width: 40px;
+    margin: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
 .logo h1{
     color: #cb5b06;
     font-weight: 600;
     text-align: right;
-    padding: 10px 0;
+    padding: 20px 0;
     padding-right: 30px;
-    pointer-events: none;
     border-bottom: 1px solid #fff;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 0;
+    padding-bottom: 28px;
 }
-.logo img{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-}
+
 ul li{
     list-style: none;
 }
+
 ul li a{
     color: #fff;
     font-weight: 500;
-    padding: 20px 0;
-    display: block;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.3s ease-out;
+    white-space: nowrap;
+    font-size: 14px;
 }
-ul li a .active{
-    background-color: #cb5b06;
-}
-ul li a i{
-    width: 40px;
-    text-align: center;
-}
-ul li:hover a{
-    background-color: #cb5b06;
-}
-input{
-    display: none;
-    visibility: hidden;
-}
-/* .toggle{
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    top: 12px;
-    left: 233px;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: 5px;
-    background: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: translateX(-220px);
-    transition: 0.5s ease;
 
-}  */
-.toggle .common{
-    position: absolute;
-    height: 2px;
-    width: 10px;
-    border-radius: 50px;
+ul li a i{
+    width: 24px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li:hover a,
+ul li a.active{
     background-color: #cb5b06;
-    transition: 0.3s ease;
 }
-.toggle .top-line{
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+/* PROFILE + LOGOUT SA SIDEBAR */
+.profile{
+    position: absolute;
+    color: #fff;
+    bottom: 80px;
+    left: 40px;
+    font-size: 16px;
 }
-.toggle .middle-line{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.toggle .bottom-line{
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-input:checked ~ .toggle .top-line{
-    left: 0px;
-    top: 10px;
-    width: 20px;
-    transform: rotate(45deg);
-}
-input:checked ~ .toggle .bottom-line{
-    left: 0px;
-    top: 10px;
-    width: 20px;
-    transform: rotate(-45deg);
-}
-input:checked ~ .toggle .middle-line{ 
-    opacity: 0;
-    transform: translateX(20px);
-}
-input:checked ~ .slide{
-    transform: translateX(0);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-input:checked ~ .toggle{
-    transform: translateX(0);
-}
+
 .logout{
     position: absolute;
-    top: 550px;
+    bottom: 40px;
     left: 80px;
     height: 32px;
-    width: 70px;
+    width: 90px;
     cursor: pointer;
     border-radius: 5px;
     background-color: #cb5b06;
     padding-top: 5px;
     padding-left: 5px;
-
 }
+
 .logout-btn{
     text-decoration: none;
     color: #fff;
 }
-.logout:hover {
+
+.logout:hover{
     background-color: #000;
 }
-.profile{
-    position: absolute;
-    color: #fff;
-    bottom: 40px;
-    left: 80px;
-}
-.panel{
-    background-color: #191919;
-    position: absolute;
-    left:28%;
-    width: 65%;
-    height:75%;
-    padding: 15px;
-    color: white;
-    font-size:  45px;
-    text-align: center;
-    border-radius: 20px;
-    font: 600;
-}
-.member{
-    top: 120px;
-}
 
-.table-container {
-    width: 100%;
-    height: 100%;
-    background: #111;
-    padding: 25px 20px 30px;
-    border-radius: 12px;
-    position: relative;
-    color: #fff;
-}
-
-.add-btn {
+/* CONTENT AREA */
+.content{
     position: absolute;
-    top: 12px;
-    right: 15px;
-    font-size: 22px;
-    background: none;
-    border: 2px solid white;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+    top: 140px;                 /* below header */
+    left: 350px;                /* offset from sidebar */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% - 380px);
 }
 
-table {
+/* TITLE BOX */
+.center-box {
+    background-color: #191919;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.orange-text {
+    color: #E36D01;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.white-text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* TABLE CONTAINER */
+.schedule-table-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    padding: 15px 15px 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.schedule-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
+    color: white;
+    font-size: 16px;
 }
 
-th, td {
-    border: 1px solid #bbb;
-    padding: 10px;
+.schedule-table th,
+.schedule-table td {
+    border: 2px solid #fff;
+    padding: 10px 12px;
     text-align: center;
-    font-size: 20px;
 }
 
-th {
+.schedule-table th {
+    background-color: #111;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ACTION BUTTONS */
+.action-btn {
+    background-color: #cb5b06;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: white;
     font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 2px 4px;
+}
+
+.action-btn.delete {
+    background-color: #b00000;
+}
+
+.action-btn:hover {
+    filter: brightness(1.1);
+}
+
+/* BACK BUTTON */
+.back-btn-wrapper{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .setting-btn {
     background: #d45500;
     color: white;
     border: none;
-    padding: 15px;
-    margin-top:800px;
-    margin-left:600px;
+    padding: 12px 25px;
     border-radius: 40px;
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
-
 }
 
 .setting-btn:hover {
@@ -306,96 +279,5 @@ th {
 .setting-btn a {
     color: #ffffff;
     text-decoration: none;
+    display: block;
 }
-
-.schedule-table-container {
-            position: absolute;
-            top: 300px;
-            left: 250px;
-        }
-
-        .schedule-table {
-            width: 900px;
-            border-collapse: collapse;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            font-size: 18px;
-        }
-
-        .schedule-table th,
-        .schedule-table td {
-            border: 2px solid #fff;
-            padding: 12px 15px;
-            text-align: center;
-        }
-
-        .schedule-table th {
-            background-color: #111;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .table2-container {
-            position: absolute;
-            top: 300px;
-            left: 250px;
-        }
-
-        .table2 {
-            width: 900px;
-            border-collapse: collapse;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            font-size: 18px;
-        }
-
-        .table2 th,
-        .table2 td {
-            border: 2px solid #fff;
-            padding: 12px 15px;
-            text-align: center;
-        }
-
-        .table2 th {
-            background-color: #111;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .cancel-btn {
-            background-color: #cb5b06;
-            border: none;
-            padding: 8px 18px;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .cancel-btn:hover {
-            background-color: #ff7b00;
-        }
-        .center-box {
-    position: absolute;
-    width: 50%;
-    left: 350px;
-    top: 100px;
-    background-color: #191919;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.orange-text {
-    color: #E36D01;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.white-text {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
-}
-
-    
